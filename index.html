@@ -9,15 +9,156 @@
   <script>
     // Picture element HTML5 shiv
     document.createElement("picture");
-
   </script>
   <script src="js/picturefill.min.js" async></script>
 </head>
 
 <body>
-Чтото появилось и опять пропало
-  <script src="js/scripts.js"></script>
+
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="cart" viewBox="0 0 11.791 11.894">
+      <path d="M3.847 4.987a.5.5 0 0 0 .5-.5V2.558a1.567 1.567 0 1 1 3.135 0v1.933a.5.5 0 0 0 .991 0V2.558a2.559 2.559 0 0 0-5.117 0v1.933a.5.5 0 0 0 .491.496"
+      />
+      <path d="M11.594 3.873h-2.63v.618a.991.991 0 1 1-1.982 0v-.618H4.838v.618a.991.991 0 0 1-1.982 0v-.618H.2a.186.186 0 0 0-.189.241l1.734 7.06a1.015 1.015 0 0 0 .933.719h6.439a1.015 1.015 0 0 0 .933-.719l1.734-7.06a.185.185 0 0 0-.19-.241"
+      />
+    </symbol>
+    <symbol id="close" viewBox="0 0 22.012 22.013">
+      <path d="M22.01 1.06L20.951 0 11.01 9.945 1.061 0 0 1.06l9.944 9.95L0 20.952l1.061 1.058 9.949-9.94 9.941 9.94 1.059-1.058-9.95-9.942 9.95-9.95z"
+      />
+    </symbol>
+    <symbol id="compare" viewBox="0 0 10 10">
+      <path d="M0 3h2v7H0zM8 2h2v7.999H8zM4 0h2v10H4z" />
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 38.099 38.097">
+      <path d="M19.049 0A19.049 19.049 0 1 0 38.1 19.049 19.07 19.07 0 0 0 19.049 0m0 36.578a17.529 17.529 0 1 1 17.53-17.529 17.548 17.548 0 0 1-17.53 17.529"
+      />
+      <path d="M24.106 14.639a1.519 1.519 0 0 0 .846-1.362v-3.034a1.52 1.52 0 0 0-1.519-1.52h-2.606c-3.707 0-5.749 1.941-5.749 5.467v.3h-.431a1.52 1.52 0 0 0-1.519 1.519v3.034a1.52 1.52 0 0 0 1.519 1.52h.431v7.283a1.52 1.52 0 0 0 1.52 1.52h3.9a1.52 1.52 0 0 0 1.52-1.52v-7.281h1.085a1.521 1.521 0 0 0 1.51-1.349l.346-3.03a1.522 1.522 0 0 0-.853-1.547m-1 4.405H20.5v8.8h-3.9v-8.8h-1.953V16.01H16.6v-1.82c0-2.476 1.1-3.947 4.229-3.947h2.605v3.034H21.8c-1.217 0-1.3.425-1.3 1.216v1.518h2.95"
+      />
+    </symbol>
+    <symbol id="html-academy" viewBox="0 0 26.945 34.09">
+      <path d="M13.62.017L13.473 0 0 1.412v24.661l13.474 8.02 13.426-7.99.042-.024V1.415M25.02 12.13L13.5 5.337v-.104l-.087.05-.088-.056v.109l-11.4 6.785V3.15l11.549-1.212L25.02 3.15v8.98M13.405 6.79l11.518 6.713-4.478 2.64-7.093-4.221-.015 1.415 5.9 3.513-.86.507-5.03-2.992-.015 1.415 3.827 2.275-.782.523-3.03-1.787-.011 1.412 1.854 1.091-1.8 1.081-11.357-6.75m-.109 1.505l11.411 6.791.017 1.044-7.943-4.728-.001 1.416 7.978 4.795.019 1.076-7.974-4.74-.017 1.419 8.02 4.822.047.024 8.142-4.872L21.612 17l3.415-2.036v10.02l-11.546 6.872-11.548-6.872v-9.851"
+        fill="#fff" />
+    </symbol>
+    <symbol id="insta" viewBox="0 0 38.099 38.097">
+      <path d="M19.049 0A19.049 19.049 0 1 0 38.1 19.049 19.07 19.07 0 0 0 19.049 0m0 36.578a17.529 17.529 0 1 1 17.53-17.529 17.549 17.549 0 0 1-17.53 17.529"
+      />
+      <path d="M25.07 8.763H13.03a4.565 4.565 0 0 0-4.56 4.56v11.452a4.565 4.565 0 0 0 4.56 4.56h12.04a4.565 4.565 0 0 0 4.56-4.56V13.324a4.565 4.565 0 0 0-4.56-4.561m-12.04 1.52h12.04a3.043 3.043 0 0 1 3.04 3.04v2.969h-5.82a4.648 4.648 0 0 0-6.482 0h-5.82v-2.968a3.043 3.043 0 0 1 3.04-3.04m6.02 6.212a3.165 3.165 0 1 1-3.164 3.165 3.168 3.168 0 0 1 3.165-3.161m6.02 11.314h-12.04a3.043 3.043 0 0 1-3.04-3.039v-6.962h4.759a4.684 4.684 0 1 0 8.6 0h4.76v6.962a3.043 3.043 0 0 1-3.037 3.039"
+      />
+      <rect x="23.286" y="11.801" width="2.811" height="2.81" rx=".76" />
+    </symbol>
+    <symbol id="plus" viewBox="0 0 16 16">
+      <path fill="#231f20" d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7" />
+    </symbol>
+    <symbol id="search" viewBox="0 0 16 16">
+      <path d="M15.7 14.3l-3.1-3.1a7.035 7.035 0 1 0-1.4 1.4l3.1 3.1a.91.91 0 0 0 .7.3 1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"
+      />
+    </symbol>
+    <symbol id="twitter" viewBox="0 0 38.098 38.097">
+      <path d="M19.049 0A19.049 19.049 0 1 0 38.1 19.049 19.07 19.07 0 0 0 19.049 0m0 36.578a17.529 17.529 0 1 1 17.53-17.53 17.549 17.549 0 0 1-17.53 17.53"
+      />
+      <path d="M29.514 13.326a4.953 4.953 0 0 0 .244-.614.76.76 0 0 0-1.112-.885 7.316 7.316 0 0 1-1.949.806 4.809 4.809 0 0 0-8 3.6v.079a10.776 10.776 0 0 1-6.89-3.867.76.76 0 0 0-1.246.1 4.818 4.818 0 0 0-.152 4.556.761.761 0 0 0-.532.708v.068a4.818 4.818 0 0 0 1.584 3.565.761.761 0 0 0-.129.705 4.8 4.8 0 0 0 2.546 2.89 7.441 7.441 0 0 1-3.944.61.76.76 0 0 0-.5 1.394A12.27 12.27 0 0 0 28.331 16.7v-.154a8.919 8.919 0 0 0 1.881-2.042.76.76 0 0 0-.698-1.178m-2.4 2.234a.76.76 0 0 0-.315.652c.008.163.001.325.001.489a10.754 10.754 0 0 1-13.922 10.277 8.822 8.822 0 0 0 3.433-1.656.76.76 0 0 0-.455-1.358 3.285 3.285 0 0 1-2.517-1.246 4.792 4.792 0 0 0 .75-.141.76.76 0 0 0-.049-1.478 3.286 3.286 0 0 1-2.44-2.114 4.744 4.744 0 0 0 .85.1.76.76 0 0 0 .45-1.385 3.3 3.3 0 0 1-1.406-3.345 12.285 12.285 0 0 0 8.037 3.561.75.75 0 0 0 .622-.271.761.761 0 0 0 .156-.66 3.289 3.289 0 0 1 5.6-3 .76.76 0 0 0 .7.226l.1-.02a.76.76 0 0 0 .517 1.29"
+      />
+    </symbol>
+    <symbol id="user" viewBox="0 0 13 12">
+      <g fill="#231f20">
+        <ellipse cx="6.5" cy="3.059" rx="2.946" ry="3.059" />
+        <path d="M6.5 6.117C2.91 6.117 0 8.751 0 12h13c0-3.249-2.911-5.883-6.5-5.883z" />
+      </g>
+    </symbol>
+  </svg>
+
+  <header class="page-header">
+    <div class="container">
+
+      <article class="main-logo">
+        <h1 class="main-logo_title">Device</h1>
+      </article>
+
+      <nav class="service-nav">
+        <ul>
+          <li class="service-nav__search">
+            <div class="service-nav__search-wrapper">
+              <input id="search-field" type="text">
+              <label for="search-field">Поиск по сайту</label>
+            </div>
+          </li>
+          <li class="service-nav__login">
+            <a href="/">Войти</a>
+          </li>
+          <li class="service-nav__compare">
+            <a href="/">Сравнить</a>
+          </li>
+          <li class="service-nav__cart">
+            <a href="/">Корзина</a>
+            </li>
+        </ul>
+      </nav>
+
+      <nav class="main-nav">
+        <ul>
+          <li class="main-nav__catalog">
+            <a href="/">Каталог товаров</a>
+            <ul class="main-nav__submenu">
+              <li class="main-nav__submenu-item">
+                <a href="/">Виртуальная реальность</a>
+              </li>
+              <li class="main-nav__submenu-item">
+                <a href="/">Фитнесс-браслеты</a>
+              </li>
+              <li class="main-nav__submenu-item">
+                <a href="/">Квадрокоптеры</a>
+              </li>
+              <li class="main-nav__submenu-item">
+                <a href="/">Моноподы для селфи</a>
+              </li>
+              <li class="main-nav__submenu-item">
+                <a href="/">Умные часы</a>
+              </li>
+              <li class="main-nav__submenu-item">
+                <a href="/">Экшн-камеры</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-nav__delivery"></li>
+          <li class="main-nav__warranty"></li>
+          <li class="main-nav__contacts"></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main-index">
+
+    <article class="slider">
+      <h2 class="visually-hidden">Слайдер изображений</h2>
+      <input id="btn-1" name="toggle" checked type="radio">
+      <input id="btn-2" name="toggle" type="radio">
+      <input id="btn-3" name="toggle" type="radio">
+      <div class="slider__controls">
+        <label for="btn-01"></label>
+        <label for="btn-02"></label>
+        <label for="btn-03"></label>
+      </div>
+      <div class="slider__slides">
+        <div class="slide  slide--selfie">
+          <div class="slide__img-wrapper">
+            <img src="/img/slider-1.png" width="384" heigth="486" alt="Монопод для селфи">
+          </div>
+        </div>
+        <div class="slide  slide--fitness"></div>
+        <div class="slide  slide--kvadrocopter"></div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="page-footer">
+
+  </footer>
+
+
+  <script src="js/scripts.min,js"></script>
 </body>
 
 </html>
-

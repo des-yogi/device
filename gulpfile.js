@@ -85,10 +85,10 @@ gulp.task("copy:html", function() {
 });
 
 gulp.task("scripts", function() {
-  return gulp.src("js/**/*.js")
+  return gulp.src(["js/**/*.js", "!js/lib/*.js"])
   .pipe(concat("scripts.js"))
   .pipe(gulp.dest("build/js"))
-  .pipe(rename("scripts.min.js"))
+  .pipe(rename({suffix: '.min'}))
   .pipe(uglify())
   .pipe(gulp.dest("build/js"));
 });
