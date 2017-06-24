@@ -1,0 +1,126 @@
+.slide {
+  display: flex;
+
+  padding-left: 30px;
+  padding-right: 60px;
+
+  &--selfie {
+    padding-left: 90px;
+  }
+}
+
+.slide__img-wrapper {
+  flex-basis: 50%;
+  margin-right: 13px;
+}
+
+.slide__text-wrapper {
+  position: relative;
+  flex-basis: 50%;
+  padding-top: 85px;
+  padding-right: 20px;
+}
+
+.slide__number {
+  position: absolute;
+  top: -30px;
+  right: 5px;
+  width: 166px;
+  height: 131px;
+  font-family: @gilroy;
+  font-size: 179px;
+  font-weight: 700;
+  color: @white;
+
+  &:before {
+    position: absolute;
+    top: 65px;
+    left: -330px;
+    display: block;
+    width: 100px;
+    height: 7px;
+    content: "";
+    background-color: @white;
+  }
+}
+
+.slide__title {
+  margin-bottom: 23px;
+  .title-text(@black);
+  text-transform: none;
+  letter-spacing: none;
+}
+
+.slide__descr {
+  .main-para();
+  margin-bottom: 40px;
+}
+
+.slide__more-inform {
+  .link-button();
+  width: 220px;
+  margin-bottom: 55px;
+}
+
+.promo-slider__controls {
+  position: absolute;
+  z-index: 15;
+  top: 205px;
+  right: 80px;
+  min-height: 10px;
+  min-width: 100px;
+  max-width: 240px;
+
+  label {
+    display: inline-block;
+    vertical-align: top;
+    width: 10px;
+    height: 10px;
+    margin: 0 12px;
+    background-color: @white;
+    border: 3px solid @black;
+    border-radius: 50%;
+    opacity: 0.3;
+    cursor: pointer;
+
+    font-size: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+    &:active {
+      opacity: 1;
+    }
+  }
+}
+
+#btn-1:checked ~ .promo-slider__controls label[for=btn-1],
+#btn-2:checked ~ .promo-slider__controls label[for=btn-2],
+#btn-3:checked ~ .promo-slider__controls label[for=btn-3] {
+  opacity: 1;
+}
+
+.slide__options-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide__options-item {
+  p {
+    font-family: @gilroy;
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 300;
+    color: @black;
+  }
+
+  span {
+    font-family: @opensans;
+    font-size: 13px;
+    color: @grey-darken;
+  }
+}
