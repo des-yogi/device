@@ -76,3 +76,18 @@
     color: rgba(0, 0, 0, 0.3);
   }
 }
+
+.placeholder() {
+  &::-webkit-input-placeholder {
+    .main-para();
+  }
+  &::-moz-placeholder          {
+    .main-para();
+    }/* Firefox 19+ */
+  &:-moz-placeholder           {
+    .main-para();
+    }/* Firefox 18- */
+  &:-ms-input-placeholder      {
+    .main-para();
+  }
+}

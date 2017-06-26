@@ -1,0 +1,119 @@
+.services {
+  min-height: 390px;
+  background: linear-gradient(to bottom, @white, @white 100px,  @grey 100px, @grey);
+
+  input {
+    display: none;
+  }
+}
+
+.services__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services__slider-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 280px;
+  height: 320px;
+  margin-right: 123px;
+  border-right: 7px solid @black;
+
+  label {
+    width: 160px;
+    .link-button();
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, transparent, transparent 16px, @orange-dark 16px, @orange-dark 24px, transparent 24px);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+
+    &:first-child {
+      margin-top: 80px;
+    }
+    &:last-child {
+      margin-bottom: 80px;
+    }
+
+    &:active {
+      width: 100%;
+      text-align: left;
+      color: @orange-light;
+      background: @black;
+    }
+
+    &:active:nth-child(2) {
+      padding-left: 23px;
+    }
+    &:active:nth-child(3) {
+      padding-left: 37px;
+    }
+  }
+}
+
+.services__slide-title {
+  margin-top: 72px;
+  margin-bottom: 30px;
+  .title-text(@black);
+  text-transform: none;
+}
+
+.services__slide-descr {
+  padding-right: 300px;
+  .main-para();
+}
+
+.services__slide-delivery {
+  padding-bottom: 25px;
+  background-image: url(../img/delivery.png);
+  background-size: 136px 164px;
+  background-position: 90% 42%;
+  background-repeat: no-repeat;
+}
+
+.services__slide-warranty {
+  height: 195px;
+  background-image: url(../img/warranty.png);
+  background-size: 171px 195px;
+  background-position: 90% 42%;
+  background-repeat: no-repeat;
+}
+
+.services__slide-credit {
+  height: 188px;
+  background-image: url(../img/credit.png);
+  background-size: 156px 188px;
+  background-position: 90% 42%;
+  background-repeat: no-repeat;
+}
+
+#btn-delivery:checked ~ .services__slider-controls label[for=btn-delivery],
+#btn-warranty:checked ~ .services__slider-controls label[for=btn-warranty],
+#btn-credit:checked ~ .services__slider-controls label[for=btn-credit] {
+  width: 100%;
+  text-align: left;
+  color: @orange-light;
+  background: @black;
+}
+
+.services__slide-delivery,
+.services__slide-warranty,
+.services__slide-credit {
+  display: none;
+}
+
+#btn-delivery:checked ~ .services__slides div:nth-child(1) {
+  display: block;
+}
+
+#btn-warranty:checked ~ .services__slides div:nth-child(2) {
+  display: block;
+}
+
+#btn-credit:checked ~ .services__slides div:nth-child(3) {
+  display: block;
+}

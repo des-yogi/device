@@ -1,50 +1,79 @@
 .slide {
-  display: flex;
-
-  padding-left: 30px;
+  // display: flex;
+  display: none;
+  height: 490px;
   padding-right: 60px;
+  padding-left: 88px;
 
-  &--selfie {
-    padding-left: 90px;
+  &--kvadrocopter {
+    padding-right: 0;
+    padding-left: 26px;
   }
 }
 
 .slide__img-wrapper {
-  flex-basis: 50%;
+  width: 560px;
   margin-right: 13px;
+
+  &--fitness {
+    padding-top: 10px;
+  }
+
+  &--kvadrocopter {
+    padding-top: 65px;
+  }
 }
 
 .slide__text-wrapper {
   position: relative;
-  flex-basis: 50%;
+  width: 560px;
   padding-top: 85px;
   padding-right: 20px;
 }
 
 .slide__number {
-  position: absolute;
-  top: -30px;
-  right: 5px;
-  width: 166px;
+  position: relative;
+  width: 100%;
   height: 131px;
+  margin-top: -110px;
   font-family: @gilroy;
   font-size: 179px;
   font-weight: 700;
+  text-align: right;
+  transform: translateX(27px);
   color: @white;
 
   &:before {
     position: absolute;
     top: 65px;
-    left: -330px;
+    left: -27px;
     display: block;
     width: 100px;
     height: 7px;
     content: "";
     background-color: @white;
   }
+
+  &--fitness {
+    transform: translateX(23px);
+
+    &::before {
+      left: -23px;
+    }
+  }
+
+  &--kvadrocopter {
+    transform: translateX(-38px);
+
+    &::before {
+      left: 38px;
+    }
+  }
 }
 
 .slide__title {
+  position: relative;
+  margin-top: -22px;
   margin-bottom: 23px;
   .title-text(@black);
   text-transform: none;
@@ -60,6 +89,7 @@
   .link-button();
   width: 220px;
   margin-bottom: 55px;
+  transition: all 0.5s ease-in-out;
 }
 
 .promo-slider__controls {
@@ -104,12 +134,26 @@
   opacity: 1;
 }
 
+#btn-1:checked ~ .promo-slider__slides .slide--selfie {
+  display: flex;
+}
+
+#btn-2:checked ~ .promo-slider__slides .slide--fitness {
+  display: flex;
+}
+
+#btn-3:checked ~ .promo-slider__slides .slide--kvadrocopter {
+  display: flex;
+}
+
 .slide__options-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .slide__options-item {
+  margin-right: 60px;
+
   p {
     font-family: @gilroy;
     font-size: 36px;

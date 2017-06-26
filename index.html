@@ -36,8 +36,7 @@
       />
     </symbol>
     <symbol id="html-academy" viewBox="0 0 26.945 34.09">
-      <path d="M13.62.017L13.473 0 0 1.412v24.661l13.474 8.02 13.426-7.99.042-.024V1.415M25.02 12.13L13.5 5.337v-.104l-.087.05-.088-.056v.109l-11.4 6.785V3.15l11.549-1.212L25.02 3.15v8.98M13.405 6.79l11.518 6.713-4.478 2.64-7.093-4.221-.015 1.415 5.9 3.513-.86.507-5.03-2.992-.015 1.415 3.827 2.275-.782.523-3.03-1.787-.011 1.412 1.854 1.091-1.8 1.081-11.357-6.75m-.109 1.505l11.411 6.791.017 1.044-7.943-4.728-.001 1.416 7.978 4.795.019 1.076-7.974-4.74-.017 1.419 8.02 4.822.047.024 8.142-4.872L21.612 17l3.415-2.036v10.02l-11.546 6.872-11.548-6.872v-9.851"
-        fill="#fff" />
+      <path d="M13.62.017L13.473 0 0 1.412v24.661l13.474 8.02 13.426-7.99.042-.024V1.415M25.02 12.13L13.5 5.337v-.104l-.087.05-.088-.056v.109l-11.4 6.785V3.15l11.549-1.212L25.02 3.15v8.98M13.405 6.79l11.518 6.713-4.478 2.64-7.093-4.221-.015 1.415 5.9 3.513-.86.507-5.03-2.992-.015 1.415 3.827 2.275-.782.523-3.03-1.787-.011 1.412 1.854 1.091-1.8 1.081-11.357-6.75m-.109 1.505l11.411 6.791.017 1.044-7.943-4.728-.001 1.416 7.978 4.795.019 1.076-7.974-4.74-.017 1.419 8.02 4.822.047.024 8.142-4.872L21.612 17l3.415-2.036v10.02l-11.546 6.872-11.548-6.872v-9.851"/>
     </symbol>
     <symbol id="insta" viewBox="0 0 38.099 38.097">
       <path d="M19.049 0A19.049 19.049 0 1 0 38.1 19.049 19.07 19.07 0 0 0 19.049 0m0 36.578a17.529 17.529 0 1 1 17.53-17.529 17.549 17.549 0 0 1-17.53 17.529"
@@ -80,8 +79,9 @@
         <ul class="service-nav__inner">
           <li class="service-nav__search">
             <div class="service-nav__search-wrapper">
-              <label for="search-field">Поиск по сайту</label>
-              <input id="search-field" type="text">
+              <input id="search-field" class="service-nav__search-field" type="text" placeholder="Поиск по сайту">
+              <!-- <label class="service-nav__search-label" for="search-field">Найти</label> -->
+              <button class="service-nav__search-submit" type="submit">Найти</button>
             </div>
           </li>
           <li class="service-nav__login">
@@ -179,8 +179,44 @@
             </div>
           </div>
 
-          <div class="slide  slide--fitness"></div>
-          <div class="slide  slide--kvadrocopter"></div>
+          <div class="slide  slide--fitness">
+            <div class="slide__img-wrapper slide__img-wrapper--fitness">
+              <img src="img/slider-2.png" alt="Фитнесс-браслет" width="345" height="485">
+            </div>
+            <div class="slide__text-wrapper">
+              <div class="slide__number  slide__number--fitness">02</div>
+              <h3 class="slide__title">Худеем <br>правильно!</h3>
+              <p class="slide__descr">Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+              <a href="" class="slide__more-inform">Подробнее</a>
+              <ul class="slide__options-wrapper">
+                <li class="slide__options-item">
+                  <p>48 часов <br><span>Без подзарядки</span></p>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="slide  slide--kvadrocopter">
+            <div class="slide__img-wrapper  slide__img-wrapper--kvadrocopter">
+              <img src="img/slider-3.png" alt="Квадрокоптер" width="526" height="334">
+            </div>
+            <div class="slide__text-wrapper  slide__text-wrapper--kvadrocopter">
+              <div class="slide__number  slide__number--kvadrocopter">03</div>
+              <h3 class="slide__title  slide__title--kvadrocopter">Порхает как бабочка, <br>жалит как пчела!</h3>
+              <p class="slide__descr">Этот обычный, на первый взгляд, квадрокоптер оснащен <br> мощным лазером, замаскированным под стандартную камеру.
+</p>
+              <a href="" class="slide__more-inform">Подробнее</a>
+              <ul class="slide__options-wrapper  slide__options-wrapper--kvadrocopter">
+                <li class="slide__options-item">
+                  <p>800 м <br><span>Дальность полета</span></p>
+                </li>
+                <li class="slide__options-item">
+                  <p>50 м <br><span>Радиус поражения</span></p>
+                </li>
+              </ul>
+            </div>
+
+          </div>
         </div>
 
       </article>
@@ -245,7 +281,7 @@
 
     <article class="services">
 
-      <div class="container">
+      <div class="services__wrapper  container">
 
         <h2 class="visually-hidden">Услуги, гарантии и кредит</h2>
         <input id="btn-delivery" name="toggle-serv" checked type="radio">
@@ -258,46 +294,23 @@
           <label for="btn-credit">Кредит</label>
         </div>
 
-        <div class="services__slide-wrapper">
+        <div class="services__slides">
+
           <div class="services__slide-delivery">
             <h3 class="services__slide-title">Доставка</h3>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+            <p class="services__slide-descr">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </div>
-        </div>
 
-        <div class="services__slide-warranty"></div>
-        <div class="services__slide-credit"></div>
+          <div class="services__slide-warranty">
+            <h3 class="services__slide-title">Гарантия</h3>
+            <p class="services__slide-descr">Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+          </div>
 
-      </div>
+          <div class="services__slide-credit">
+            <h3 class="services__slide-title">Кредит</h3>
+            <p class="services__slide-descr">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+          </div>
 
-    </article>
-
-    <article class="partners-logo">
-
-      <div class="container">
-
-        <div>
-          <a href="">
-            <img src="img/logo-1.jpg" alt="Логотип партнера" width="196" height="73">
-          </a>
-        </div>
-
-        <div>
-          <a href="">
-            <img src="img/logo-2.jpg" alt="Логотип партнера" width="260" height="73"
-            ></a>
-        </div>
-
-        <div>
-          <a href="">
-            <img src="img/logo-3.jpg" alt="Логотип партнера" width="260" height="73">
-          </a>
-        </div>
-
-        <div>
-          <a href="">
-            <img src="img/logo-4.jpg" alt="Логотип партнера" width="224" height="73">
-          </a>
         </div>
 
       </div>
@@ -305,31 +318,58 @@
     </article>
 
     <div class="container">
+      <article class="partners-logo">
 
-      <article class="about">
-        <h2 class="about__title">О нас</h2>
-        <div class="about__text">
-          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-          <ul class="about__list">
-            <li>Деловые Линии</li>
-            <li>Автотрейдинг</li>
-            <li>ЖелДорЭкспедиция</li>
-          </ul>
-          <a class="about__more-btn">Подробнее о нас</a>
-        </div>
+        <a class="partners-logo__link" href="">
+          <img src="img/logo-1.jpg" alt="Логотип партнера" width="260" height="100">
+        </a>
+
+        <a class="partners-logo__link" href="">
+          <img src="img/logo-2.jpg" alt="Логотип партнера" width="260" height="100">
+        </a>
+
+        <a class="partners-logo__link" href="">
+          <img src="img/logo-3.jpg" alt="Логотип партнера" width="260" height="100">
+        </a>
+
+        <a class="partners-logo__link" href="">
+          <img src="img/logo-4.jpg" alt="Логотип партнера" width="260" height="100">
+        </a>
+
       </article>
+    </div>
 
-      <article class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <p class="contacts__text">
-          Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
-        </p>
-        <section class="contacts__map-wrapper"></section>
 
-        <a href="" class="contacts__write-us-btn">Напишите нам</a>
-      </article>
+    <div class="container">
+      <div class="about-contacts">
 
+        <article class="about">
+          <h2 class="about__title">О нас</h2>
+          <div class="about__text">
+            <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+            <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+            <ul class="about__list">
+              <li>Деловые Линии</li>
+              <li>Автотрейдинг</li>
+              <li>ЖелДорЭкспедиция</li>
+            </ul>
+            <a class="about__more-btn">Подробнее о нас</a>
+          </div>
+        </article>
+
+        <article class="contacts">
+          <h2 class="contacts__title">Контакты</h2>
+          <p class="contacts__text">
+            Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+          </p>
+          <section class="contacts__map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d795.1793907235872!2d37.52932740676315!3d55.687128188787455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGW0Y8sIDExOTMxMQ!5e0!3m2!1suk!2sua!4v1498475641878" allowfullscreen></iframe>
+          </section>
+
+          <a href="" class="contacts__write-us-btn">Напишите нам</a>
+        </article>
+
+      </div>
     </div>
 
   </main>
@@ -337,84 +377,86 @@
   <footer class="page-footer">
     <div class="container">
 
-      <article class="main-logo  main-logo--footer">
-        <a href="index.html">
-            <h2 class="main-logo__title  main-logo__title--footer">Device</h2>
-        </a>
-        <address>
-          Москва, ул. Строителей, 15
-        </address>
-      </article>
+      <div class="page-footer__inner">
 
-      <article class="footer-nav">
-        <h2 class="visually-hidden">Навигация сайта</h2>
+        <article class="main-logo  main-logo--footer">
+          <a href="index.html">
+              <h2 class="main-logo__title  main-logo__title--footer">Device</h2>
+          </a>
+          <address>
+            Москва, ул. Строителей, 15
+          </address>
+        </article>
 
-        <section class="footer-nav__top-nav">
-          <h2 class="visually-hidden">Клиентские ссылки</h2>
+        <article class="footer-nav">
+          <h2 class="visually-hidden">Навигация сайта</h2>
 
-          <nav class="service-nav  service-nav--foter">
-            <ul>
-              <li class="service-nav__search  service-nav__search--footer">
-                <div class="service-nav__search-wrapper">
-                  <input id="search-field--footer" type="text">
-                  <label for="search-field--footer">Поиск по сайту</label>
-                </div>
+          <section class="footer-nav__top-nav">
+            <h2 class="visually-hidden">Клиентские ссылки</h2>
+
+            <div class="service-nav  service-nav--footer">
+              <ul class="service-nav__inner  service-nav__inner--footer">
+                <li class="service-nav__login  service-nav__login--footer">
+                  <a href="">Войти</a>
+                </li>
+                <li class="service-nav__compare  service-nav__compare--footer">
+                  <a href="">Сравнить</a>
+                </li>
+                <li class="service-nav__cart  service-nav__cart--footer">
+                  <a href="">Корзина</a>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+
+          <section class="footer-nav__bottom-nav">
+
+            <h2 class="visually-hidden">Сервисные ссылки</h2>
+
+            <ul class="footer-nav__links-wrapper">
+              <li class="footer-nav__delivery">
+                <a href="">Доставка</a>
               </li>
-              <li class="service-nav__login  service-nav__login--footer">
-                <a href="">Войти</a>
+              <li class="footer-nav__warranty">
+                <a href="">Гарантия</a>
               </li>
-              <li class="service-nav__compare  service-nav__compare--footer">
-                <a href="">Сравнить</a>
+              <li class="footer-nav__contacts">
+                <a href="">Контакты</a>
               </li>
-              <li class="service-nav__cart  service-nav__cart--footer">
-                <a href="">Корзина</a>
+              <li class="footer-nav__phone">
+                <a href="tel:+74954959595" title="Наш телефон">
+                  <span>Тел.:</span> +7&nbsp;(495)&nbsp;495-95-95
+                </a>
               </li>
             </ul>
-          </nav>
 
-        </section>
+          </section>
 
-        <section class="footer-nav__bottom-nav">
+          <article class="footer-nav__links">
+          <h2 class="visually-hidden">Соц. сети и копирайты</h2>
 
-          <h2 class="visually-hidden">Сервисные ссылки</h2>
+          <section class="sc-links">
+            <h2 class="visually-hidden">Мы в соц. сетях</h2>
+            <a href="" class="sc__facebook">Facebook</a>
+            <a href="" class="sc__insta">Instagram</a>
+            <a href="" class="sc__twitter">Twitter</a>
+          </section>
 
-          <ul>
-            <li class="footer-nav__delivery">
-              <a href="">Доставка</a>
-            </li>
-            <li class="footer-nav__warranty">
-              <a href="">Гарантия</a>
-            </li>
-            <li class="footer-nav__contacts">
-              <a href="">Контакты</a>
-            </li>
-            <li class="footer-nav__phone">
-              <a href="tel:+74954959595" title="Наш телефон">
-                <span>Тел.:</span> +7&nbsp;(495)&nbsp;495-95-95
-              </a>
-            </li>
-          </ul>
+          <section class="copyright-link">
+            <h2 class="visually-hidden">Разработчик сайта</h2>
+            <a href="" class="copyright-link__html-academy" title="HTML Academy Лого">HTML Academy
+              <svg class="copyright-link__academy" width="27" height="34">
+                <use xlink:href="#html-academy"></use>
+              </svg>
+            </a>
+          </section>
 
-        </section>
+        </article>
 
-      </article>
+        </article>
 
-      <article class="page-footer__links">
-        <h2 class="visually-hidden">Соц. сети и копирайты</h2>
-
-        <section class="social-links">
-          <h2 class="visually-hidden">Мы в соц. сетях</h2>
-          <a href="" class="social-links__facebook">Facebook</a>
-          <a href="" class="social-links__insta">Instagram</a>
-          <a href="" class="social-links__twitter">Twitter</a>
-        </section>
-
-        <section class="copyright-link">
-          <h2 class="visually-hidden">Разработчик сайта</h2>
-          <a href="" class="copyright-link__html-academy">HTML Academy</a>
-        </section>
-
-      </article>
+      </div>
 
     </div>
 

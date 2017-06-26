@@ -1,0 +1,54 @@
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 800px;
+}
+
+.footer-nav__top-nav,
+.footer-nav__bottom-nav,
+.footer-nav__links {
+  width: 100%;
+}
+
+.footer-nav__top-nav {
+  margin-bottom: 8px;
+}
+
+.footer-nav__bottom-nav {
+  margin-bottom: 60px;
+}
+
+.footer-nav__links-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: @white;
+
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.footer-nav__delivery,
+.footer-nav__warranty,
+.footer-nav__contacts {
+  .main-menu(@white);
+  margin-left: 40px;
+}
+
+.footer-nav__phone {
+  margin-left: auto;
+}
+
+.footer-nav__links {
+  display: flex;
+  justify-content: space-between;
+  .text-hide();
+}

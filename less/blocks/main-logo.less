@@ -8,6 +8,24 @@
 
   &--footer {
     position: static;
+    width: 360px;
+
+    address {
+      position: relative;
+      font-style: normal;
+      color: @white;
+
+      &:after {
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+        content: "";
+        display: block;
+        width: 80px;
+        height: 7px;
+        background-color: @orange-light;
+      }
+    }
   }
 }
 
@@ -15,8 +33,9 @@
   width: 164px;
   height: 36px;
   margin-bottom: 35px;
-
   .title-text(@black);
+
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     .title-text(@grey-darken);
@@ -27,6 +46,7 @@
 
   &--footer {
     .title-text(@orange-light);
+    margin-bottom: 40px;
 
     &:hover {
       .title-text(@orange-dark);
