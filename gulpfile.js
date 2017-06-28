@@ -17,6 +17,8 @@ var del = require("del");
 var runSeq = require("run-sequence");
 var server = require("browser-sync").create();
 
+// var imagezip = require("gulp-image"); // новый плагин
+
 gulp.task("style", function() {
   gulp.src("less/style.less")
     .pipe(plumber())
@@ -48,6 +50,34 @@ gulp.task("images", function() {
     ]))
     .pipe(gulp.dest("build/img"));
 });
+
+// Другой (вроде дучший алгоритм минификации изображений) ---
+// Не завелся на моей конфигурации node & npm
+
+/*gulp.task("imagezip", function () {
+  return gulp.src("img/*")
+    .pipe(imagezip())
+    .pipe(gulp.dest("build/img"));
+});*/
+
+/*gulp.task('imagezip', function () {
+  return gulp.src('img/*')
+    .pipe(imagezip({
+      pngquant: true,
+      optipng: false,
+      zopflipng: true,
+      jpegRecompress: false,
+      jpegoptim: true,
+      mozjpeg: true,
+      guetzli: false,
+      gifsicle: true,
+      svgo: true,
+      concurrent: 10
+    }))
+    .pipe(gulp.dest('build/img'));
+});*/
+
+// ----------------------------------------------------------
 
 gulp.task("symbols", function() {
   return gulp.src("img/icons/*.svg")
