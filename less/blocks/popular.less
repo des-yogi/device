@@ -1,0 +1,52 @@
+.popular {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 85px;
+}
+
+.popular__item {
+  width: 160px;
+  min-height: 160px;
+}
+
+
+.popular__img-wrapper {
+  display: flex;
+  height: 160px;
+  margin-bottom: 37px;
+  background-color: @orange;
+  transition: background-color 0.5s ease-out 0.1s;
+
+  img {
+    margin: auto;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  img[title=Monopod] {
+    margin-bottom: 0;
+  }
+}
+
+.popular__item:hover .popular__img-wrapper {
+  background-color: @orange-dark;
+}
+
+.popular__item:active .popular__img-wrapper {
+  img {
+    opacity: 0.3;
+  }
+}
+
+.popular__item:active .popular__text {
+  opacity: 0.3;
+}
+
+.popular__text {
+  padding-left: 3px;
+  padding-right: 3px;
+  font-family: @gilroy;
+  font-size: 18px;
+  font-weight: 700;
+  color: @black;
+}

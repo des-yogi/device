@@ -1,0 +1,170 @@
+.slide {
+  // display: flex;
+  display: none;
+  height: 490px;
+  padding-right: 60px;
+  padding-left: 88px;
+
+  &--kvadrocopter {
+    padding-right: 0;
+    padding-left: 26px;
+  }
+}
+
+.slide__img-wrapper {
+  width: 560px;
+  margin-right: 13px;
+
+  &--fitness {
+    padding-top: 10px;
+  }
+
+  &--kvadrocopter {
+    padding-top: 65px;
+  }
+}
+
+.slide__text-wrapper {
+  position: relative;
+  width: 560px;
+  padding-top: 85px;
+  padding-right: 20px;
+}
+
+.slide__number {
+  position: relative;
+  width: 100%;
+  height: 131px;
+  margin-top: -110px;
+  font-family: @gilroy;
+  font-size: 179px;
+  font-weight: 700;
+  text-align: right;
+  transform: translateX(27px);
+  color: @white;
+
+  &:before {
+    position: absolute;
+    top: 65px;
+    left: -27px;
+    display: block;
+    width: 100px;
+    height: 7px;
+    content: "";
+    background-color: @white;
+  }
+
+  &--fitness {
+    transform: translateX(23px);
+
+    &::before {
+      left: -23px;
+    }
+  }
+
+  &--kvadrocopter {
+    transform: translateX(-38px);
+
+    &::before {
+      left: 38px;
+    }
+  }
+}
+
+.slide__title {
+  position: relative;
+  margin-top: -22px;
+  margin-bottom: 23px;
+  .title-text(@black);
+  text-transform: none;
+  letter-spacing: none;
+}
+
+.slide__descr {
+  .main-para();
+  margin-bottom: 40px;
+}
+
+.slide__more-inform {
+  .link-button();
+  width: 220px;
+  margin-bottom: 55px;
+  transition: all 0.5s ease-in-out;
+}
+
+.promo-slider__controls {
+  position: absolute;
+  z-index: 15;
+  top: 205px;
+  right: 80px;
+  min-height: 10px;
+  min-width: 100px;
+  max-width: 240px;
+
+  label {
+    display: inline-block;
+    vertical-align: top;
+    width: 10px;
+    height: 10px;
+    margin: 0 12px;
+    background-color: @white;
+    border: 3px solid @black;
+    border-radius: 50%;
+    opacity: 0.3;
+    cursor: pointer;
+
+    font-size: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+    &:active {
+      opacity: 1;
+    }
+  }
+}
+
+#btn-1:checked ~ .promo-slider__controls label[for=btn-1],
+#btn-2:checked ~ .promo-slider__controls label[for=btn-2],
+#btn-3:checked ~ .promo-slider__controls label[for=btn-3] {
+  opacity: 1;
+}
+
+#btn-1:checked ~ .promo-slider__slides .slide--selfie {
+  display: flex;
+}
+
+#btn-2:checked ~ .promo-slider__slides .slide--fitness {
+  display: flex;
+}
+
+#btn-3:checked ~ .promo-slider__slides .slide--kvadrocopter {
+  display: flex;
+}
+
+.slide__options-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.slide__options-item {
+  margin-right: 60px;
+
+  p {
+    font-family: @gilroy;
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 300;
+    color: @black;
+  }
+
+  span {
+    font-family: @opensans;
+    font-size: 13px;
+    color: @grey-darken;
+  }
+}
