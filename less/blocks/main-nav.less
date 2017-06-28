@@ -8,7 +8,7 @@
 }
 
 .main-nav__submenu {
-  display: none;
+  // display: none;
 
   position: absolute;
   top: 45px;
@@ -21,6 +21,13 @@
   width: 1160px;
   padding: 0 500px 30px 60px;
   background-color: @orange;
+
+  &--close {
+    display: none;
+  }
+  &--open {
+    display: flex;
+  }
 }
 
 .main-nav__submenu-item {
@@ -78,9 +85,9 @@
     }
 }
 
-.main-nav__catalog:hover .main-nav__submenu {
+/* .main-nav__catalog:hover .main-nav__submenu {
   display: flex;
-}
+} */
 
 .main-nav__delivery {
   padding-left: 20px;

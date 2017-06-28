@@ -5,12 +5,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
-  <title>Главная</title>
+  <title>Главная: Магазин гаджетов Device</title>
   <script>
     // Picture element HTML5 shiv
     document.createElement("picture");
   </script>
-  <!-- <script src="js/picturefill.min.js" async></script> -->
+  <script src="js/picturefill.min.js" async></script>
 </head>
 
 <body>
@@ -80,7 +80,6 @@
           <li class="service-nav__search">
             <div class="service-nav__search-wrapper">
               <input id="search-field" class="service-nav__search-field" type="text" placeholder="Поиск по сайту">
-              <!-- <label class="service-nav__search-label" for="search-field">Найти</label> -->
               <button class="service-nav__search-submit" type="submit">Найти</button>
             </div>
           </li>
@@ -99,25 +98,25 @@
       <nav class="main-nav">
         <ul class="main-nav__inner">
           <li class="main-nav__catalog">
-            <a class="main-nav__link" href="">Каталог товаров</a>
-            <ul class="main-nav__submenu">
-              <li class="main-nav__submenu-item">
-                <a class="main-nav__submenu-link" href="">Виртуальная реальность</a>
+            <a class="main-nav__link  main-nav__link--open" href="catalog.html">Каталог товаров</a>
+            <ul class="main-nav__submenu  main-nav__submenu--close  main-nav__submenu--open">
+              <li class="main-nav__submenu-item  main-nav__submenu-item">
+                <a class="main-nav__submenu-link" href="catalog.html">Виртуальная реальность</a>
               </li>
               <li class="main-nav__submenu-item">
-                <a class="main-nav__submenu-link" href="">Фитнесс-браслеты</a>
+                <a class="main-nav__submenu-link" href="catalog.html">Фитнесс-браслеты</a>
               </li>
               <li class="main-nav__submenu-item">
-                <a class="main-nav__submenu-link" href="">Квадрокоптеры</a>
+                <a class="main-nav__submenu-link" href="catalog.html">Квадрокоптеры</a>
               </li>
               <li class="main-nav__submenu-item">
-                <a class="main-nav__submenu-link" href="">Моноподы для селфи</a>
+                <a class="main-nav__submenu-link" href="catalog.html">Моноподы для селфи</a>
               </li>
               <li class="main-nav__submenu-item">
-                <a class="main-nav__submenu-link" href="">Умные часы</a>
+                <a class="main-nav__submenu-link" href="catalog.html">Умные часы</a>
               </li>
               <li class="main-nav__submenu-item">
-                <a class="main-nav__submenu-link" href="">Экшн-камеры</a>
+                <a class="main-nav__submenu-link" href="catalog.html">Экшн-камеры</a>
               </li>
             </ul>
           </li>
@@ -158,7 +157,7 @@
 
           <div class="slide  slide--selfie">
             <div class="slide__img-wrapper">
-              <img src="img/slider-1.png" width="384" heigth="486" alt="Монопод для селфи">
+              <img src="img/slider-1.png" width="384" height="486" alt="Монопод для селфи">
             </div>
             <div class="slide__text-wrapper">
               <div class="slide__number">01</div>
@@ -319,6 +318,7 @@
 
     <div class="container">
       <article class="partners-logo">
+        <h2 class="visually-hidden">Наши партнеры</h2>
 
         <a class="partners-logo__link" href="">
           <img src="img/logo-1.jpg" alt="Логотип партнера" width="260" height="100">
@@ -363,6 +363,7 @@
             Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
           </p>
           <section class="contacts__map-wrapper">
+            <h2 class="visually-hidden">Мы находимся здесь</h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d795.1793907235872!2d37.52932740676315!3d55.687128188787455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGW0Y8sIDExOTMxMQ!5e0!3m2!1suk!2sua!4v1498475641878" allowfullscreen></iframe>
           </section>
 

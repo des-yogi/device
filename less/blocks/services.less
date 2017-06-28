@@ -50,7 +50,7 @@
       padding-left: 23px;
     }
     &:active:nth-child(3) {
-      padding-left: 37px;
+      padding-left: 36px;
     }
   }
 }
@@ -98,6 +98,14 @@
   text-align: left;
   color: @orange-light;
   background: @black;
+}
+
+#btn-warranty:checked ~ .services__slider-controls label[for=btn-warranty] {
+  padding-left: 23px;
+}
+
+#btn-credit:checked ~ .services__slider-controls label[for=btn-credit] {
+  padding-left: 36px;
 }
 
 .services__slide-delivery,
