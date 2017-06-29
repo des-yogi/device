@@ -78,10 +78,10 @@
       <nav class="service-nav">
         <ul class="service-nav__inner">
           <li class="service-nav__search">
-            <div class="service-nav__search-wrapper">
+            <form class="service-nav__search-wrapper" action="https://echo.htmlacademy.ru" method="post">
               <input id="search-field" class="service-nav__search-field" type="text" placeholder="Поиск по сайту">
               <button class="service-nav__search-submit" type="submit">Найти</button>
-            </div>
+            </form>
           </li>
           <li class="service-nav__login">
             <a href="">Войти</a>
@@ -171,7 +171,7 @@
               <li class="catalog__filter-name">Фильтр:</li>
               <li class="catalog__filter-name">Сортировка:</li>
               <li>
-                <form action="/echo" method="get" class="catalog__sort-menu">
+                <form action="https://echo.htmlacademy.ru" method="post" class="catalog__sort-menu">
                   <div class="catalog__checkbox-wrapper">
                     <input id="price-sort" type="checkbox" name="price-sort" value="price-sort" checked>
                     <input id="type-sort" type="checkbox" name="type-sort" value="type-sort">
@@ -207,7 +207,7 @@
 
             <section class="filters">
               <h2 class="visually-hidden">Фмьтры отбора товара</h2>
-              <form action="/echo" method="get" class="filters-form">
+              <form action="https://echo.htmlacademy.ru" method="post" class="filters-form">
 
                 <fieldset>
                   <legend>Стоимость</legend>
